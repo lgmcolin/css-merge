@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>css/js 选择合并</title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+	<link rel="stylesheet" href="/stylesheets/common.css" />
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<script src="/javascripts/jquery-2.0.0.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+	<script src="/javascripts/cssRain.js"></script>
+</head>
+<body>
+	<h1>CSS选择合并</h1>
+	<div class="bg"></div>
+	<div class="content">
+	    <div class="btnlist">
+	    	<button class="btn btn-1 btn-1a icon-cart create-pro">
+	    		<span>创建项目</span>
+	    	</button>
+	    </div>		
+	    <div class="projectlist">
+	    	<h2>已创建的应用列表</h2>
+	  		<ul>
+	  			<li class="proitem" style="display:none;">
+	  				<a href="#" id="no-project">还没有创建项目</a>
+	  			</li>
+	  			<li class="proitem">
+	  				<a href="/create" data-id="app">App</a>
+	  				<img id="del-icon" src="/images/delete.png" />
+	  			</li>
+	  			<li class="proitem">
+	  				<a href="#">waltz</a>
+	  				<img id="del-icon" src="/images/delete.png" />
+	  			</li>
+	  			<li class="proitem">
+	  				<a href="#">prowork</a>
+	  				<img id="del-icon" src="/images/delete.png" />
+	  			</li>
+	  			<li class="proitem">
+	  				<a href="#">cssgaga</a>
+	  				<img id="del-icon" src="/images/delete.png" />
+	  			</li> 
+	  			<span><a href="#" class="more">查看更多</a></span> 		
+	  		</ul>
+	  	</div>
+	  	<div class="popup dialog_center" style="display:none;">
+	  		<h3>新建项目</h3>
+	  		<div class="content">
+	  			<form method="post">
+	  				<p>
+	  					<span>项目名称: </span>
+	  					<input id="pro_name" type="text" placeholder="输入项目名称" data-valid="required" />
+	  				</p>
+	  				<p>
+	  					<span>项目目录:</span>
+	  					<input id="pro_dir" type="text" placeholder="/data/A/" />
+	  				</p>
+	  				<p>
+	  					<span>&nbsp;全局css:</span>
+	  					<input id="pro_dir" type="text" placeholder="/css/global"  />
+	  				</p>
+	  				<div class="ctrl">
+	  					<input id="pro_submit" class="btn btn-info" type="submit">
+	  					<input id="pro_cancle" type="button" class="btn btn-info cancle-pro" value="取消" />
+	  				</div>
+	  			</form>
+	  		</div>
+	  		<a href="#" class="close dialog_close_path">
+	  			<span>close</span>
+	  		</a>
+	  	</div>
+	  	<div class="ui_mask" style="display:none;"></div>
+	</div>
+</body>
+</html>

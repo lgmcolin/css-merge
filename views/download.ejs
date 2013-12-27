@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>css/js 选择合并</title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+	<link rel="stylesheet" href="/stylesheets/common.css" />
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<script src="/javascripts/jquery-2.0.0.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+	<script src="/javascripts/cssRain.js"></script>
+</head>
+<body>
+	<h1>CSS选择下载</h1>	
+	<form id="reset_form" action="/download" class="reset_form">
+		<fieldset>
+			<div class="select">
+				<label>将要下载的文件:</label>
+				<input id="filepath" type="text" readonly value=<%= urlOut %>  />
+	    		<input class="btn btn-info btn-add" type="button" value="确定" />
+	    	</div>	
+	    	<div class='bg'></div>
+    		<div class="btn_list">
+    			<input class="btn btn-info btn-set directBack" type="button" value="返回" >
+	    		<input class="btn btn-info btn-submit download" type="submit" value="下载文件" />
+	   	 	</div>
+		</fieldset>
+	</form>
+</body>
+</html>

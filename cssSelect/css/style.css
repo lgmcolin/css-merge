@@ -1,0 +1,65 @@
+
+h1{
+	padding: 0.8em 1em;
+	text-align: center;
+	font-size: 4em;
+	font-weight: normal;
+	font-family: tahoma,arial,sans-serif;
+	text-transform: uppercase;
+}
+.reset_form{
+	width: 500px;
+	margin: auto;
+	padding: 0em 1em;
+	box-shadow: inset -1px 0 #c1c6d0,inset -2px 0 rgba(255,255,255,0.2);
+	background-color: #e5eaf4;
+	border: 1px solid #ccc;
+	font-size: 1.4em;
+	font-family: hiragino sans gb,microsoft yahei;
+}
+label{
+	font-size:1em;
+	margin-top:20px;
+}
+#reset_form .btn-add{
+	margin-top: -8px;
+	margin-left: 10px;
+}
+.select{
+	position: relative;
+}
+.filed{
+	margin: 0 0;
+}
+.filed label{
+	display: inline-block;
+}
+
+.filelist,.baseset{
+	padding: 5px;
+	margin: 10px -3px;
+}
+
+.filelist .filed,.baseset .filed{
+	margin:10px 30px;
+}
+.btn_list{
+	margin-bottom: 20px;
+}
+.btn-set{
+	float: left;
+}
+.btn-submit{
+	float: left;
+	margin-left: 20px;
+}
+.baseset{
+	margin-top: 50px;
+}
+#outPath,#outName{
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.baseset label{
+	margin:2px;
+}

@@ -1,0 +1,286 @@
+.bg{
+	position: fixed;
+	width: calc(100% + 1em);
+	height: calc(100% + 1em);
+	left: -0.5em;
+	top: -0.5em;
+	z-index: -1;
+	background: transparent url('/images/bg.jpg') center center no-repeat;
+	background-size: cover;
+}
+h1{
+	padding: 0.8em 1em;
+	text-align: center;
+	font-size: 4em;
+	font-weight: normal;
+	font-family: tahoma,arial,sans-serif;
+	text-transform: uppercase;
+}
+.reset_form{
+	width: 500px;
+	margin: auto;
+	padding: 0em 1em;
+	box-shadow: inset -1px 0 #c1c6d0,inset -2px 0 rgba(255,255,255,0.2);
+	background-color: #e5eaf4;
+	border: 1px solid #ccc;
+	font-size: 1.4em;
+	font-family: hiragino sans gb,microsoft yahei;
+}
+label{
+	font-size:1em;
+	margin-top:20px;
+}
+#reset_form .btn-add{
+	margin-top: -8px;
+	margin-left: 10px;
+}
+.select{
+	position: relative;
+}
+.filed{
+	margin: 0 0;
+}
+.filed label{
+	display: inline-block;
+}
+
+.filelist,.global_filelist,.baseset{
+	padding: 5px;
+	margin: 10px -3px;
+}
+
+.filelist .filed,.baseset .filed,.global_filelist .filed{
+	margin:10px 30px;
+}
+.btn_list{
+	margin-bottom: 20px;
+}
+.gl-css{
+	float: left;
+}
+.btn-set,.btn-submit{
+	float: left;
+	margin-left: 20px;
+}
+.baseset{
+	margin-top: 50px;
+}
+#outPath,#outName,#globaloutName{
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.baseset label{
+	margin:2px;
+}
+.error,.warn{
+	color:red;
+}
+
+.content{
+	margin: 2% auto;
+	width: 500px;
+	text-align: center;
+}
+
+.btnlist{
+	padding: 0;
+	width: 100%;
+}
+
+.btnlist .btn{
+	border: none;
+	font-family: tahoma,arial,sans-serif;
+	font-size:3em;
+	color:#fff;
+	background-color: #458DA7;
+	cursor: pointer;
+	border-radius: 5px;
+	padding:17px 80px;
+	display: inline-block;
+	margin: 5px 30px;
+	letter-spacing: 1px;
+	font-weight: 100;
+	outline: none;
+	position: relative;
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	transition:0.3s;
+}
+
+.btnlist .btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Button 1 */
+.btn-1 {
+	background: #823aa0;
+	color: #fff;
+	height: 80px;
+	min-width: 260px;
+	line-height: 80px;
+	font-size: 16px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+}
+
+.btn-1:active {
+	background: #9053a9;
+	top: 2px;
+}
+
+.btn-1 span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+}
+
+.btn-1:before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 2.5;
+	font-size: 180%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-1:active:before {
+	color: #703b87;
+}
+
+/* Button 1a */
+.btn-1a:hover span {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.btn-1a:before {
+	left: 0;
+	top: -100%;
+}
+
+.btn-1a:hover:before {
+	top: 0;
+}
+
+.icon-cart:before {
+	content: url('/images/edit2.png');
+	line-height: 100px;
+	max-height: 60px;
+}
+
+.projectlist{
+	color: #fff;
+	margin-top: 50px;	
+	margin-left: 40px;
+	font-size: 25px;
+	width: 420px;
+	border-radius: 5px;
+	background-color: #458DA7;
+	overflow: auto;
+}
+.projectlist h2{
+	color:#000;
+	line-height:40px;
+	border-bottom:1px solid #000;
+}
+.projectlist .proitem{
+	padding: 8px 0;
+	height: 20px;
+	border-radius: 5px;
+	background-color: #8FBCDB;
+	border-bottom: 1px solid #fff;
+}
+.proitem a{
+	text-decoration: none;
+	color:#fff;
+}
+.proitem a:hover{
+	text-decoration: underline;
+	color:#fff;
+}
+.proitem a:visited{
+	color:#fff;
+}
+#del-icon{
+	float: right;
+	width: 30px;
+	height: 30px;
+	display: none;
+	margin-right: 10px;
+}
+.more{
+	margin:10px 10px 10px 0px;
+	text-decoration: none;
+	color:#000;
+}
+
+/*popup*/
+.popup{
+	position: absolute;
+	top: 28%;
+	left: 38%;
+	box-shadow: 0 0 2px #999;
+	margin: 10px;
+	z-index: 200;
+	border-radius: 4px;
+	border: 1px solid #D0D0D0;
+	background: #fff;
+	background-color: #F8E4CC;
+}
+.popup h3{
+	background-color: #F4D6BC;
+	font-size: 20px;
+	color:#000;
+}
+.popup .close{
+	width: 25px;
+	height: 25px;
+	overflow: hidden;
+	line-height: 22px;
+	position: absolute;
+	top: 6px;
+	right: 7px;
+	border-radius: 4px;
+}
+.popup .close:hover{
+	color: #fff;
+	border: 1px solid #D15861;
+	background: #D05A61;
+	box-shadow: 0 1px 0 #d87f7f inset;
+}
+.popup .close span{
+	background: url('/images/delete.png') -3px -3px no-repeat;
+	width: 25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -4px 0 0 -5px;
+	line-height: 200px;
+}
+.ui_mask{
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	opacity: .3;
+	filter:alpha(opacity=30);
+	background: #000;
+	left:0;
+	top:0;
+}
+

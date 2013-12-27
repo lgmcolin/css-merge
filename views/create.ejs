@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>css/js 选择合并</title>
+	<link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+	<link rel="stylesheet" href="/stylesheets/common.css" />
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<script src="/javascripts/jquery-2.0.0.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+	<script src="/javascripts/cssRain.js"></script>
+	<script>
+		function checkSubmit(){
+			if(!$('#filepath') || $('#filepath').val().length==0 ){
+				alert('请输入正确的文件名');
+				return false;
+			}else if(!$('#filelistValue') || $('#filelistValue').val().length===0){
+				alert('请先选择要合并的文件');
+				return false;
+			}
+			return true;
+		}
+	</script>	
+</head>
+<body>
+	<h1>CSS选择合并</h1>	
+	<form id="reset_form" action="/result" class="reset_form" onSubmit="return checkSubmit();">
+		<fieldset>
+			<div class="select">
+				<label>私有文件夹目录: /demo/A/</label>
+				<input id="filepath" type="text" placeholder="filefolder path"/>
+	    		<input class="btn btn-info btn-add" type="button" value="确定">
+	    	</div>	
+    		<div class="filelist"  style='display:none;'>
+    			<span>** 选择合并的私有css文件:</span>
+    			<input id="filelistValue"  type="text" name="filelistValue" style="display:none;" />
+    		</div>	
+
+    		<div class="global_filelist" >
+    			<span>** global css文件:</span>
+    			<input id="globalFilelist" type="text" name="globalfilelist" style="display:none;" />
+    			<% 
+    				if(global_filelist.length !==0) {
+    					global_filelist.forEach(function(pro){
+    			%>
+	    			<div class="filed">
+	    				<input type="checkbox" />
+	    				<span><%= pro %></span>
+	    			</div>
+    			<%
+    					})
+    				}else{	
+    			%>
+    					<span class="warn">暂时没有global css!</span>
+    			<%
+    				}
+    			%>
+    		</div>	
+
+    		<div class="btn_list">
+    			<% 
+    				if(global_filelist.length !==0) {	
+    			%>
+    			<input type="button" class="btn btn-info gl-css" value="global文件合并" />
+	    		<% 
+	    			} 
+	    		%>
+	    		<input class="btn btn-info btn-submit" type="submit" value="private文件合并下载">
+	    		<input class="btn btn-info btn-set" type="button" value="设置" divname="baseset">
+	    	</div>	
+	    	<div class='bg'></div>
+    		<div class="baseset"  style='display:none;'>
+    			<span>基本设置:</span>
+	    		<!-- <div class="filed">
+	    			<input type="checkbox" id="css" checked disabled="disabled">
+	    			<label for="css">css</label>
+	    		</div> -->
+	    		<div class="filed check_name">
+	    			<input type="checkbox" id="check_outname">
+	    			<label for="base">指定private CSS文件名 (默认为pg_global.css)</label>
+	    			<div class="outName" style="display:none;">
+	    				<input id="outName" name="outName" type="text" placeholder="private css name">
+	    			</div>
+	    		</div>
+	    		<div class="filed check_name">
+	    			<input type="checkbox" id="check_outname">
+	    			<label for="base">指定 global CSS文件名 (默认为global.css)</label>
+	    			<div class="outName" style="display:none;">
+	    				<input id="globaloutName" name="globaloutName" value="" type="text" placeholder="global css name">
+	    			</div>
+	    		</div>
+	    		<!-- <div class="filed check_urlOut">
+	    			<input type="checkbox" id="check_urlOut">
+	    			<label for="check_urlOut">指定下载html文件名 (默认为index.html)</label>
+	    			<div class="urlOut" style="display:none;">
+	    				<input id="urlOut" name="urlOut" type="text" placeholder="html name">
+	    			</div>
+	    		</div> -->
+	    		<!-- <div class="filed">
+	    			<input type="checkbox" id="short" name="">
+	    			<label for="short">压缩</label>
+	    		</div>
+	    		<div class="filed">
+	    			<input type="checkbox" id="global_css" name="">
+	    			<label for="check_global">显示非全局css</label>
+	    		</div> -->
+	    	</div>
+
+		</fieldset>
+	</form>
+</body>
+</html>

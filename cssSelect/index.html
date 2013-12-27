@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>css/js 选择合并</title>
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="./css/common.css" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<script src="./js/jquery-2.0.0.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+	<script src="./test.js"></script>
+</head>
+<body>
+	<h1>CSS/JS选择合并</h1>	
+	<form id="reset_form" action="/" class="reset_form">
+		<fieldset>
+			<div class="select">
+				<label>请选择文件夹:</label>
+				<input type="text" placeholder="filefolder path" />
+	    		<input class="btn btn-info btn-add" type="button" value="确定">
+	    	</div>	
+    		<div class="filelist"  style='display:none;'>
+    			<span>选择合并的文件:</span>
+    			<div class="filed">
+    				<input type="checkbox" />
+    				<span>lgm.css</span>
+    			</div>
+    			<div class="filed">
+    				<input type="checkbox" />
+    				<span>rain.css</span>
+    			</div>
+    			<div class="filed">
+    				<input type="checkbox" />
+    				<span>zj.css</span>
+    			</div>
+    		</div>	
+
+    		<div class="btn_list">
+	    		<input class="btn btn-info btn-set" type="button" value="设置" divname="baseset">
+	    		<input class="btn btn-info btn-submit" type="submit" value="合并文件">
+	    	</div>	
+
+    		<div class="baseset"  style='display:none;'>
+    			<span>基本设置:</span>
+	    		<div class="filed">
+	    			<input type="checkbox" id="css" checked disabled="disabled">
+	    			<label for="css">css</label>
+	    		</div>
+	    		<div class="filed">
+	    			<input type="checkbox" id="short">
+	    			<label for="short">压缩</label>
+	    		</div>
+	    		<div class="filed">
+	    			<input type="checkbox" id="check_global">
+	    			<label for="check_global">显示非全局css</label>
+	    		</div>
+	    		<div class="filed check_name">
+	    			<input type="checkbox" id="check_outname">
+	    			<label for="base">指定输出文件名 (默认为combine.css)</label>
+	    			<div class="outName" style="display:none;">
+	    				<input id="outName" type="text" placeholder="file name">
+	    			</div>	
+	    		</div>
+	    	</div>
+
+		</fieldset>
+	</form>
+</body>
+</html>
